@@ -52,7 +52,7 @@ function Uploadresume() {
       console.log(result);
 
       setLoading(false);
-      navigate('/');
+      // navigate('/');
     } catch (error) {
       console.error("Error uploading file:", error);
       setLoading(false);
