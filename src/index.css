@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+}
+
+/* Print-specific styles */
+@media print {
+  /* Hide unnecessary elements */
+  body * {
+    visibility: hidden;
+  }
+  /* Display only the CV content */
+  #cv-content, #cv-content * {
+    visibility: visible;
+  }
+  /* Set page margins and padding */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  /* Adjust font size and line height for better readability */
+  #cv-content {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  /* Add additional print-specific styling as needed */
+}
+
+
+
+.dot-before::before {
+  content: "• "; /* This adds the dot before the content */
+}
+
+
+/* index.css */
+body, html {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* styles.css */
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
